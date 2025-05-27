@@ -1,0 +1,186 @@
+/* molecular_simulator/molecular_simulator/gui/style.qss */
+
+/* Global settings */
+QWidget {
+    font-family: 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif; /* Common modern fonts */
+    font-size: 10pt; /* Or 13px, adjust as needed */
+    background-color: #ECEFF1; /* Light grey background - Material Design Blue Grey 50 */
+    color: #263238; /* Dark text - Material Design Blue Grey 900 */
+}
+
+QMainWindow, QDialog {
+    background-color: #ECEFF1;
+}
+
+/* Buttons */
+QPushButton {
+    background-color: #546E7A; /* Material Design Blue Grey 600 */
+    color: white;
+    border: 1px solid #455A64; /* Material Design Blue Grey 700 */
+    padding: 6px 12px;
+    border-radius: 4px;
+    min-height: 20px; /* Ensure buttons are not too small */
+}
+QPushButton:hover {
+    background-color: #607D8B; /* Material Design Blue Grey 500 */
+}
+QPushButton:pressed {
+    background-color: #455A64; /* Material Design Blue Grey 700 */
+}
+QPushButton:disabled {
+    background-color: #B0BEC5; /* Material Design Blue Grey 200 */
+    color: #78909C; /* Material Design Blue Grey 400 */
+}
+
+/* Input Fields */
+QLineEdit, QSpinBox, QDoubleSpinBox, QComboBox {
+    background-color: #CFD8DC; /* Material Design Blue Grey 100 */
+    border: 1px solid #90A4AE; /* Material Design Blue Grey 300 */
+    padding: 4px;
+    border-radius: 3px;
+    color: #263238;
+}
+QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QComboBox:focus {
+    border: 1px solid #03A9F4; /* Material Design Light Blue 500 */
+}
+QComboBox::drop-down {
+    border: none;
+    background-color: #90A4AE; /* Material Design Blue Grey 300 */
+}
+QComboBox::down-arrow {
+    image: url(:/qt-project.org/styles/commonstyle/images/standardbutton-down-arrow.png); /* Standard Qt arrow, might need adjustment or custom one */
+    width: 12px;
+    height: 12px;
+}
+
+
+/* List Widget */
+QListWidget {
+    background-color: #CFD8DC; /* Material Design Blue Grey 100 */
+    border: 1px solid #90A4AE; /* Material Design Blue Grey 300 */
+    border-radius: 3px;
+    alternate-background-color: #B0BEC5; /* For item views with alternating row colors */
+}
+QListWidget::item {
+    padding: 5px;
+}
+QListWidget::item:selected {
+    background-color: #03A9F4; /* Material Design Light Blue 500 */
+    color: white;
+}
+QListWidget::item:hover:!selected { /* Hover on non-selected items */
+    background-color: #B3E5FC; /* Material Design Light Blue 100 */
+    color: #263238;
+}
+
+
+/* Menu Bar */
+QMenuBar {
+    background-color: #455A64; /* Material Design Blue Grey 700 */
+    color: white;
+    border-bottom: 1px solid #37474F; /* Material Design Blue Grey 800 */
+}
+QMenuBar::item {
+    background-color: transparent;
+    padding: 6px 10px;
+}
+QMenuBar::item:selected { /* Hover over menu bar item */
+    background-color: #546E7A; /* Material Design Blue Grey 600 */
+}
+QMenuBar::item:pressed {
+    background-color: #607D8B; /* Material Design Blue Grey 500 */
+}
+
+/* Menu */
+QMenu {
+    background-color: #ECEFF1; /* Background of the dropdown menu */
+    border: 1px solid #B0BEC5; /* Border for the dropdown */
+    color: #263238;
+}
+QMenu::item {
+    padding: 6px 20px; /* Padding for menu items */
+}
+QMenu::item:selected {
+    background-color: #03A9F4; /* Selection color for menu items */
+    color: white;
+}
+QMenu::separator {
+    height: 1px;
+    background-color: #B0BEC5; /* Color for separators */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Dock Widget */
+QDockWidget {
+    titlebar-close-icon: url(:/qt-project.org/styles/commonstyle/images/closedock.png); /* Standard icons, may vary by Qt version/style */
+    titlebar-normal-icon: url(:/qt-project.org/styles/commonstyle/images/undock.png);
+}
+QDockWidget::title {
+    background-color: #546E7A; /* Material Design Blue Grey 600 */
+    color: white;
+    padding: 6px;
+    border: 1px solid #455A64;
+    border-bottom-color: #546E7A; /* Match background to avoid double line */
+}
+
+/* Tab Widget (if used in future, example) */
+QTabWidget::pane {
+    border: 1px solid #90A4AE;
+    border-top: none; 
+    background-color: #ECEFF1;
+}
+QTabBar::tab {
+    background-color: #B0BEC5; /* Material Design Blue Grey 200 */
+    color: #263238;
+    border: 1px solid #90A4AE;
+    border-bottom: none; /* Tab is part of the top border */
+    padding: 8px 15px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+QTabBar::tab:selected {
+    background-color: #ECEFF1; /* Match pane background */
+    color: #263238;
+    border-bottom-color: #ECEFF1; /* Make bottom border disappear */
+}
+QTabBar::tab:!selected:hover {
+    background-color: #CFD8DC; /* Material Design Blue Grey 100 */
+}
+
+
+/* Scroll Bars (can be complex to style fully cross-platform) */
+QScrollBar:vertical {
+    border: 1px solid #90A4AE;
+    background: #CFD8DC;
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+    background: #78909C; /* Material Design Blue Grey 400 */
+    min-height: 20px;
+    border-radius: 3px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+    height: 0px; /* Hide arrows */
+}
+/* Horizontal scrollbar similar if needed */
+
+
+/* Status Bar */
+QStatusBar {
+    background-color: #CFD8DC; /* Material Design Blue Grey 100 */
+    color: #263238;
+    border-top: 1px solid #90A4AE;
+}
+
+/* Tooltip */
+QToolTip {
+    background-color: #37474F; /* Darker tooltip */
+    color: white;
+    border: 1px solid #263238;
+    padding: 4px;
+    opacity: 230; /* Slightly transparent */
+}

@@ -1,0 +1,2 @@
+# Base generator class
+pass

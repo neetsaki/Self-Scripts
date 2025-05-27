@@ -1,0 +1,2 @@
+# Defines molecular structures
+pass
